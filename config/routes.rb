@@ -4,8 +4,8 @@ Rails.application.routes.draw do
 get '/' => 'users#new', as: 'user'
 post '/' => 'users#create'
 
-get '/login' => 'sessions#new'
-post '/login' =>'sessions#create'
+get '/login' , to: 'sessions#new'
+post '/login', to:'sessions#create'
 
-get '/:user' => 'users#show', as: 'homepage'
+get '/:user', to: 'users#show', as: 'homepage'
 end
