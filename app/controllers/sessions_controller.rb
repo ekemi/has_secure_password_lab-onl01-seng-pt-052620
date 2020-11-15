@@ -8,7 +8,7 @@ def create
 if @user == nil
   redirect_to 'new'
 else
-  return head(:forbidden) unless @user.authenticate(params[:user][:password]
+  return head(:forbidden) unless @user.authenticate(params[:user][:password])
   session[:user_id]=@user.id
   redirect_to homepage_path(@user)
 end
